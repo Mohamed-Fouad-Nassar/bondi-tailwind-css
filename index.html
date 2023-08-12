@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- roboto fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- tailwind css file -->
+    <link href="./dist/style.css" rel="stylesheet" />
+
+    <!-- OR -->
+    <!-- tailwind cdn -->
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <!-- tailwind cdn config js -->
+    <!-- <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              mainBG: "#19283f",
+              secBG: "#33d1cc",
+              btnBG: "#ff3150",
+              btnHover: "#db3750",
+              transColor: "#eff7fa",
+              headColor: "#ffc501",
+              textColor: "#a8b9c0",
+            },
+          },
+        },
+      };
+    </script> -->
+
+    <title>Tailwind Css</title>
+  </head>
+  <body>
+    <header class="fixed top-0 left-0 w-full p-3 z-50 bg-mainBG">
+      <div class="container mx-auto flex items-center justify-between">
+        <section class="w-[80px]">
+          <a href="#home">
+            <img
+              src="./dist/assets/images/logo.png"
+              alt="logo-image"
+              class="w-full"
+            />
+          </a>
+          <!-- <h1 class="font-bold text-secBG">logo</h1> -->
+        </section>
+
+        <section class="hidden items-center space-x-8 sm:flex">
+          <nav class="">
+            <ul class="flex items-center space-x-5">
+              <li>
+                <a href="#home" class="text-textColor hover:text-secBG">home</a>
+              </li>
+              <li>
+                <a href="#services" class="text-textColor hover:text-secBG"
+                  >services</a
+                >
+              </li>
+              <li>
+                <a href="#portfolio" class="text-textColor hover:text-secBG"
+                  >portfolio</a
+                >
+              </li>
+              <li>
+                <a href="#about" class="text-textColor hover:text-secBG"
+                  >about</a
+                >
+              </li>
+              <li>
+                <a href="#contact" class="text-textColor hover:text-secBG"
+                  >contact</a
+                >
+              </li>
+            </ul>
+          </nav>
+          <div
+            class="flex justify-center items-center space-x-4 relative before:absolute before:h-[25px] before:w-[1px] before:bg-secBG before:-left-4"
+          >
+            <button class="flex justify-center items-center">
+              <ion-icon
+                class="text-secBG text-xl"
+                name="search-outline"
+              ></ion-icon>
+            </button>
+            <button
+              class="text-headColor bg-btnBG px-5 py-2 rounded-full hover:bg-btnHover"
+            >
+              login
+            </button>
+          </div>
+        </section>
+
+        <section class="sm:hidden flex items-center justify-center space-x-3">
+          <button class="flex justify-center items-center">
+            <ion-icon
+              class="text-secBG text-xl"
+              name="search-outline"
+            ></ion-icon>
+          </button>
+          <button id="mobileNavBtn" class="flex items-center justify-center">
+            <ion-icon
+              class="text-textColor text-3xl hover:text-secBG"
+              name="reorder-four-outline"
+            ></ion-icon>
+          </button>
+          <nav
+            id="mobileNavMenu"
+            class="hidden block absolute left-4 right-4 top-16 p-3 bg-transColor rounded-[5px] shadow"
+          >
+            <ul class="flex items-start flex-col space-y-0">
+              <li class="w-full border-b border-b-textColor">
+                <a
+                  href="#home"
+                  class="block py-2 text-mainBG hover:text-secBG hover:pl-2"
+                  >home</a
+                >
+              </li>
+              <li class="w-full border-b border-b-textColor">
+                <a
+                  href="#services"
+                  class="block py-2 text-mainBG hover:text-secBG hover:pl-2"
+                  >services</a
+                >
+              </li>
+              <li class="w-full border-b border-b-textColor">
+                <a
+                  href="#portfolio"
+                  class="block py-2 text-mainBG hover:text-secBG hover:pl-2"
+                  >portfolio</a
+                >
+              </li>
+              <li class="w-full border-b border-b-textColor">
+                <a
+                  href="#about"
+                  class="block py-2 text-mainBG hover:text-secBG hover:pl-2"
+                  >about</a
+                >
+              </li>
+              <li class="w-full">
+                <a
+                  href="#content"
+                  class="block py-2 text-mainBG hover:text-secBG hover:pl-2"
+                  >content</a
+                >
+              </li>
+            </ul>
+            <button
+              class="text-headColor bg-btnBG w-full px-5 py-2 mt-2 rounded-full hover:bg-btnHover"
+            >
+              login
+            </button>
+          </nav>
+        </section>
+      </div>
+    </header>
+
+    <main>
+      <section id="home" class="pt-[66px] bg-mainBG text-textColor text-center">
+        <div class="container mx-auto py-28 px-2">
+          <h1 class="text-5xl pb-2 text-transColor">taste the creativity</h1>
+          <p class="text-sm pb-10">We make awesome graphic and web design</p>
+          <button
+            class="text-headColor bg-btnBG px-16 py-2 rounded-full hover:bg-btnHover"
+          >
+            Get Start
+          </button>
+        </div>
+      </section>
+
+      <section id="services">
+        <div class="container mx-auto py-12 px-2">
+          <section class="text-center pb-12">
+            <ion-icon
+              class="text-headColor text-6xl -rotate-[45deg]"
+              name="git-network-outline"
+            ></ion-icon>
+            <h2 class="text-3xl pb-0 text-mainBG font-medium">
+              we are good at
+            </h2>
+            <p class="text-sm text-textColor">SOME OF THEASE STUFF UNDER</p>
+            <span class="block bg-secBG mt-4 h-[1px] w-32 mx-auto"></span>
+          </section>
+          <section
+            class="flex flex-wrap flex-col justify-center items-center sm:flex-row"
+          >
+            <div class="p-3 w-full sm:w-1/2 lg:w-1/3">
+              <section class="relative w-fit mx-auto">
+                <ion-icon
+                  class="absolute bottom-2 left-[50%] -translate-x-[50%] text-7xl text-center text-secBG"
+                  name="create-outline"
+                ></ion-icon>
+                <!-- <span class="absolute bottom-0 left-0"></span> -->
+                <span
+                  class="flex items-center justify-center text-[15rem] text-transColor font-black h-[200px] overflow-hidden"
+                  >1</span
+                >
+              </section>
+              <h3 class="text-headColor text-center">GRAPHIC DESIGN</h3>
+              <p class="text-center text-textColor">
+                Pellentesque in ipsum id orci porta dapibus. Vivamus magna
+                justo, lacinia eget consectetur sed, convallis at tellus.
+              </p>
+            </div>
+            <div class="p-3 w-full sm:w-1/2 lg:w-1/3">
+              <section class="relative w-fit mx-auto">
+                <ion-icon
+                  class="absolute bottom-2 left-[50%] -translate-x-[50%] text-7xl text-center text-secBG"
+                  name="desktop-outline"
+                ></ion-icon>
+                <!-- <span class="absolute bottom-0 left-0"></span> -->
+                <span
+                  class="flex items-center justify-center text-[15rem] text-transColor font-black h-[200px] overflow-hidden"
+                  >2</span
+                >
+              </section>
+              <h3 class="text-headColor text-center">WEB DESIGN</h3>
+              <p class="text-center text-textColor">
+                Pellentesque in ipsum id orci porta dapibus. Vivamus magna
+                justo, lacinia eget consectetur sed, convallis at tellus.
+              </p>
+            </div>
+            <div class="p-3 w-full sm:w-1/2 lg:w-1/3">
+              <section class="relative w-fit mx-auto">
+                <ion-icon
+                  class="absolute bottom-2 left-[50%] -translate-x-[50%] text-7xl text-center text-secBG"
+                  name="tv-outline"
+                ></ion-icon>
+                <!-- <span class="absolute bottom-0 left-0"></span> -->
+                <span
+                  class="flex items-center justify-center text-[15rem] text-transColor font-black h-[200px] overflow-hidden"
+                  >3</span
+                >
+              </section>
+              <h3 class="text-headColor text-center">APP DESIGN</h3>
+              <p class="text-center text-textColor">
+                Pellentesque in ipsum id orci porta dapibus. Vivamus magna
+                justo, lacinia eget consectetur sed, convallis at tellus.
+              </p>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <section id="portfolio" class="bg-transColor">
+        <div class="container mx-auto py-12 px-2">
+          <section class="text-center pb-12">
+            <ion-icon
+              class="text-headColor text-6xl -rotate-[45deg]"
+              name="git-network-outline"
+            ></ion-icon>
+            <h2 class="text-3xl pb-0 text-mainBG font-medium">we make this</h2>
+            <p class="text-sm text-textColor">PREPARE TO BE AMAZED</p>
+            <span class="block bg-secBG mt-4 h-[1px] w-32 mx-auto"></span>
+          </section>
+          <section>
+            <div
+              id="filter"
+              class="pb-10 flex flex-wrap items-center justify-center gap-2"
+            >
+              <button class="px-5 py-2 bg-btnBG text-headColor rounded">
+                all
+              </button>
+              <button
+                class="px-5 py-2 bg-transparent text-textColor hover:bg-btnBG hover:text-headColor rounded"
+              >
+                design
+              </button>
+              <button
+                class="px-5 py-2 bg-transparent text-textColor hover:bg-btnBG hover:text-headColor rounded"
+              >
+                code
+              </button>
+              <button
+                class="px-5 py-2 bg-transparent text-textColor hover:bg-btnBG hover:text-headColor rounded"
+              >
+                photography
+              </button>
+              <button
+                class="px-5 py-2 bg-transparent text-textColor hover:bg-btnBG hover:text-headColor rounded"
+              >
+                apps
+              </button>
+            </div>
+            <div class="flex flex-wrap items-center justify-center gap-4">
+              <section
+                class="relative w-[80%] sm:w-1/3 lg:w-1/4 xl:w-1/5 group"
+              >
+                <div
+                  class="hidden group-hover:flex absolute top-0 left-0 w-full h-full bg-secBG items-center justify-center flex-col"
+                >
+                  <h4 class="text-transColor font-bold text-xl">title</h4>
+                  <span class="text-mainBG text-sm">category</span>
+                </div>
+                <img
+                  class="object-cover w-full h-full"
+                  src="./dist/assets/images/gallery-01.png"
+                  alt="gallery-01-image"
+                />
+              </section>
+              <section
+                class="relative w-[80%] sm:w-1/3 lg:w-1/4 xl:w-1/5 group"
+              >
+                <div
+                  class="hidden group-hover:flex absolute top-0 left-0 w-full h-full bg-secBG items-center justify-center flex-col"
+                >
+                  <h4 class="text-transColor font-bold text-xl">title</h4>
+                  <span class="text-mainBG text-sm">category</span>
+                </div>
+                <img
+                  class="object-cover w-full h-full"
+                  src="./dist/assets/images/gallery-06.png"
+                  alt="gallery-06-image"
+                />
+              </section>
+              <section
+                class="relative w-[80%] sm:w-1/3 lg:w-1/4 xl:w-1/5 group"
+              >
+                <div
+                  class="hidden group-hover:flex absolute top-0 left-0 w-full h-full bg-secBG items-center justify-center flex-col"
+                >
+                  <h4 class="text-transColor font-bold text-xl">title</h4>
+                  <span class="text-mainBG text-sm">category</span>
+                </div>
+                <img
+                  class="object-cover w-full h-full"
+                  src="./dist/assets/images/gallery-02.png"
+                  alt="gallery-02-image"
+                />
+              </section>
+              <section
+                class="relative w-[80%] sm:w-1/3 lg:w-1/4 xl:w-1/5 group"
+              >
+                <div
+                  class="hidden group-hover:flex absolute top-0 left-0 w-full h-full bg-secBG items-center justify-center flex-col"
+                >
+                  <h4 class="text-transColor font-bold text-xl">title</h4>
+                  <span class="text-mainBG text-sm">category</span>
+                </div>
+                <img
+                  class="object-cover w-full h-full"
+                  src="./dist/assets/images/gallery-03.jpg"
+                  alt="gallery-03-image"
+                />
+              </section>
+              <section
+                class="relative w-[80%] sm:w-1/3 lg:w-1/4 xl:w-1/5 group"
+              >
+                <div
+                  class="hidden group-hover:flex absolute top-0 left-0 w-full h-full bg-secBG items-center justify-center flex-col"
+                >
+                  <h4 class="text-transColor font-bold text-xl">title</h4>
+                  <span class="text-mainBG text-sm">category</span>
+                </div>
+                <img
+                  class="object-cover w-full h-full"
+                  src="./dist/assets/images/gallery-06.png"
+                  alt="gallery-06-image"
+                />
+              </section>
+              <section
+                class="relative w-[80%] sm:w-1/3 lg:w-1/4 xl:w-1/5 group"
+              >
+                <div
+                  class="hidden group-hover:flex absolute top-0 left-0 w-full h-full bg-secBG items-center justify-center flex-col"
+                >
+                  <h4 class="text-transColor font-bold text-xl">title</h4>
+                  <span class="text-mainBG text-sm">category</span>
+                </div>
+                <img
+                  class="object-cover w-full h-full"
+                  src="./dist/assets/images/gallery-04.png"
+                  alt="gallery-04-image"
+                />
+              </section>
+              <section
+                class="relative w-[80%] sm:w-1/3 lg:w-1/4 xl:w-1/5 group"
+              >
+                <div
+                  class="hidden group-hover:flex absolute top-0 left-0 w-full h-full bg-secBG items-center justify-center flex-col"
+                >
+                  <h4 class="text-transColor font-bold text-xl">title</h4>
+                  <span class="text-mainBG text-sm">category</span>
+                </div>
+                <img
+                  class="object-cover w-full h-full"
+                  src="./dist/assets/images/gallery-05.jpg"
+                  alt="gallery-05-image"
+                />
+              </section>
+              <section
+                class="relative w-[80%] sm:w-1/3 lg:w-1/4 xl:w-1/5 group"
+              >
+                <div
+                  class="hidden group-hover:flex absolute top-0 left-0 w-full h-full bg-secBG items-center justify-center flex-col"
+                >
+                  <h4 class="text-transColor font-bold text-xl">title</h4>
+                  <span class="text-mainBG text-sm">category</span>
+                </div>
+                <img
+                  class="object-cover w-full h-full"
+                  src="./dist/assets/images/gallery-02.png"
+                  alt="gallery-02-image"
+                />
+              </section>
+            </div>
+            <button
+              class="block mt-10 text-headColor bg-btnBG px-16 py-2 rounded-full mx-auto hover:bg-btnHover"
+            >
+              I WAN'T MORE...
+            </button>
+          </section>
+        </div>
+      </section>
+
+      <section id="about">
+        <div class="container mx-auto pt-12 px-2">
+          <section class="text-center pb-12">
+            <ion-icon
+              class="text-headColor text-6xl -rotate-[45deg]"
+              name="git-network-outline"
+            ></ion-icon>
+            <h2 class="text-3xl pb-0 text-mainBG font-medium">
+              Some Stuff About Us
+            </h2>
+            <p class="text-sm text-textColor">THE GREAT TEAM</p>
+            <span class="block bg-secBG mt-4 h-[1px] w-32 mx-auto"></span>
+            <p
+              class="max-w-[600px] text-center text-textColor text-sm mx-auto pt-4"
+            >
+              Donec rutrum congue leo eget malesuada. Mauris blandit aliquet
+              elit, eget tincidunt nibh pulvinar a. Pellentesque in ipsum id
+              orci porta dapibus. Proin eget tortor risus. Donec sollicitudin
+              molestie malesuada.
+            </p>
+          </section>
+          <section
+            class="flex flex-col items-center gap-3 md:flex-row md:items-end lg:items-center"
+          >
+            <div
+              class="pb-12 w-full text-center space-y-0 md:w-[40%] lg:w-[30%] md:space-y-3 md:text-start"
+            >
+              <h3 class="text-3xl text-mainBG font-medium pb-4">
+                retina design
+              </h3>
+              <p class="text-sm text-textColor">
+                Vestibulum ac diam sit amet quam vehicula elementum sed sit amet
+                dui. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar
+                a.
+              </p>
+              <p class="text-sm text-textColor !mb-3">
+                Donec rutrum congue leo eget malesuada. Mauris blandit aliquet
+                elit, eget tincidunt nibh pulvinar a. Pellentesque in ipsum id
+                orci porta dapibus. Proin eget tortor risus. Donec sollicitudin
+                molestie malesuada.
+              </p>
+              <button
+                class="text-headColor bg-btnBG px-10 py-2 rounded-full hover:bg-btnHover"
+              >
+                OREDER ME ONE
+              </button>
+            </div>
+            <div class="w-full md:w-[60%] lg:w-[70%] -mb-[1px]">
+              <img
+                class="max-w-[850px] w-full mx-auto"
+                src="./dist/assets/images/makbook.png"
+                alt="makbook-image"
+              />
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <section id="team" class="bg-transColor">
+        <div class="container mx-auto py-12 px-2">
+          <section class="text-center pb-12">
+            <h2 class="text-3xl pb-4 text-headColor">Meet the Team</h2>
+            <p class="max-w-[850px] mx-auto text-textColor text-sm">
+              Donec rutrum congue leo eget malesuada. Mauris blandit aliquet
+              elit, eget tincidunt nibh pulvinar a. Pellentesque in ipsum id
+              orci porta dapibus. Proin eget tortor risus. Donec sollicitudin
+              molestie malesuada.
+            </p>
+          </section>
+          <section class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            <div class="max-w-[340px] mx-auto text-center">
+              <img src="./dist/assets/images/team-01.jpg" alt="team-image-1" />
+              <h3 class="py-3 w-full bg-secBG text-white text-lg">
+                Luke Skywalker
+              </h3>
+              <p class="p-5 text-sm text-textColor bg-white">
+                “I don't understand how we got by those troops. I thought we
+                were dead.“
+              </p>
+            </div>
+            <div class="max-w-[340px] mx-auto text-center">
+              <img src="./dist/assets/images/team-01.jpg" alt="team-image-2" />
+              <h3 class="py-3 w-full bg-secBG text-white text-lg">
+                Obi-Wan Kenobi
+              </h3>
+              <p class="p-5 text-sm text-textColor bg-white">
+                “I don't understand how we got by those troops. I thought we
+                were dead.“
+              </p>
+            </div>
+            <div class="max-w-[340px] mx-auto text-center">
+              <img src="./dist/assets/images/team-03.jpg" alt="team-image-3" />
+              <h3 class="py-3 w-full bg-secBG text-white text-lg">
+                Luke Skywalker
+              </h3>
+              <p class="p-5 text-sm text-textColor bg-white">
+                “I don't understand how we got by those troops. I thought we
+                were dead.“
+              </p>
+            </div>
+            <div class="max-w-[340px] mx-auto text-center">
+              <img src="./dist/assets/images/team-03.jpg" alt="team-image-4" />
+              <h3 class="py-3 w-full bg-secBG text-white text-lg">
+                Luke Skywalker
+              </h3>
+              <p class="p-5 text-sm text-textColor bg-white">
+                “I don't understand how we got by those troops. I thought we
+                were dead.“
+              </p>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <section id="logos">
+        <div
+          class="container mx-auto py-12 px-10 gap-2 grid grid-cols-1 sm:grid-cols-3 md:grid-cols-6"
+        >
+          <div class="mx-auto">
+            <img src="./dist/assets/images/logo-01.png" alt="logo-image-01" />
+          </div>
+          <div class="mx-auto">
+            <img src="./dist/assets/images/logo-02.png" alt="logo-image-02" />
+          </div>
+          <div class="mx-auto">
+            <img src="./dist/assets/images/logo-03.png" alt="logo-image-03" />
+          </div>
+          <div class="mx-auto">
+            <img src="./dist/assets/images/logo-04.png" alt="logo-image-04" />
+          </div>
+          <div class="mx-auto">
+            <img src="./dist/assets/images/logo-01.png" alt="logo-image-05" />
+          </div>
+          <div class="mx-auto">
+            <img src="./dist/assets/images/logo-02.png" alt="logo-image-06" />
+          </div>
+        </div>
+      </section>
+
+      <section id="new" class="bg-mainBG text-textColor text-center">
+        <div class="container mx-auto py-20 px-2">
+          <h1 class="text-3xl pb-2 text-transColor">Start Your Project Now</h1>
+          <p class="text-sm pb-10">
+            Leave your description and we start the engine.Don't worry,you can
+            cancel anytime
+          </p>
+          <button
+            class="text-headColor bg-btnBG px-10 py-2 rounded-full hover:bg-btnHover"
+          >
+            START PROJECT
+          </button>
+        </div>
+      </section>
+
+      <section id="blog">
+        <div class="container mx-auto py-12 px-10">
+          <section class="text-center pb-12">
+            <ion-icon
+              class="text-headColor text-6xl -rotate-[45deg]"
+              name="git-network-outline"
+            ></ion-icon>
+            <h2 class="text-3xl pb-0 text-mainBG font-medium">read our blog</h2>
+            <p class="text-sm text-textColor">NEW STORIES</p>
+            <span class="block bg-secBG mt-4 h-[1px] w-32 mx-auto"></span>
+          </section>
+          <section class="gap-4 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4">
+            <div>
+              <img src="./dist/assets/images/blog-01.jpg" alt="blog-01-image" />
+              <section class="p-4 bg-slate-100">
+                <span class="text-sm text-textColor">January 17,2017</span>
+                <a href="" class="block text-lg text-mainBG hover:text-secBG">
+                  Some Awesome Blog Title Here
+                </a>
+              </section>
+            </div>
+            <div>
+              <img src="./dist/assets/images/blog-02.jpg" alt="blog-02-image" />
+              <section class="p-4 bg-slate-100">
+                <span class="text-sm text-textColor">January 17,2017</span>
+                <a href="" class="block text-lg text-mainBG hover:text-secBG">
+                  Some Awesome Blog Title Here
+                </a>
+              </section>
+            </div>
+            <div>
+              <img src="./dist/assets/images/blog-03.jpg" alt="blog-03-image" />
+              <section class="p-4 bg-slate-100">
+                <span class="text-sm text-textColor">January 17,2017</span>
+                <a href="" class="block text-lg text-mainBG hover:text-secBG">
+                  Some Awesome Blog Title Here
+                </a>
+              </section>
+            </div>
+            <div>
+              <img src="./dist/assets/images/blog-04.jpg" alt="blog-04-image" />
+              <section class="p-4 bg-slate-100">
+                <span class="text-sm text-textColor">January 17,2017</span>
+                <a href="" class="block text-lg text-mainBG hover:text-secBG">
+                  Some Awesome Blog Title Here
+                </a>
+              </section>
+            </div>
+          </section>
+          <button
+            class="block mt-10 text-headColor bg-btnBG px-10 py-2 rounded-full mx-auto hover:bg-btnHover"
+          >
+            MORE STORIES
+          </button>
+        </div>
+      </section>
+
+      <section id="subscription" class="bg-headColor">
+        <div class="container max-w-[950px] mx-auto py-7 px-10">
+          <form
+            action=""
+            class="gap-7 flex flex-col flex-wrap items-center md:flex-row"
+          >
+            <label
+              for="sub-input"
+              class="w-full lg:w-fit text-xl text-mainBG font-medium"
+              >Subscribe to our Newsletter:</label
+            >
+            <input
+              type="email"
+              id="sub-input"
+              placeholder="Enter email Address"
+              class="flex-1 py-2 px-3 bg-transparent border-b border-b-white outline-none caret-white w-full placeholder:text-white focus:placeholder:text-transparent"
+            />
+            <button
+              class="md:max-w-[200px] text-headColor bg-mainBG px-10 py-2 rounded-full hover:opacity-[0.95]"
+            >
+              Subscribe
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-mainBG">
+      <div
+        class="container gap-10 text-textColor mx-auto py-12 px-2 grid grid-cols-1 md:gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
+      >
+        <section class="flex flex-col justify-between gap-5">
+          <div>
+            <img
+              class="max-w-[100px]"
+              src="./dist/assets/images/logo.png"
+              alt="logo-image"
+            />
+            <p class="pt-5">
+              Pellentesque in ipsum id orci porta dapibus. Vivamus magna justo,
+              lacinia eget consectetur sed, convallis at tellus.
+            </p>
+          </div>
+          <div>
+            <span class="block">Created by Graphberry, Belgrade, Serbia</span>
+            <span> &copy; <span id="thisYear"></span> - Bondi.Inc</span>
+          </div>
+        </section>
+        <section>
+          <h4 class="pb-2 md:pb-5 text-white text-lg">links</h4>
+          <nav>
+            <ul>
+              <li class="border-b border-b-textColor">
+                <a href="#" class="block py-2 hover:pl-3 hover:text-secBG"
+                  >home</a
+                >
+              </li>
+              <li class="border-b border-b-textColor">
+                <a href="#" class="block py-2 hover:pl-3 hover:text-secBG"
+                  >our services</a
+                >
+              </li>
+              <li class="border-b border-b-textColor">
+                <a href="#" class="block py-2 hover:pl-3 hover:text-secBG"
+                  >portfolio</a
+                >
+              </li>
+              <li class="border-b border-b-textColor">
+                <a href="#" class="block py-2 hover:pl-3 hover:text-secBG"
+                  >testimonials</a
+                >
+              </li>
+              <li class="border-b border-b-textColor">
+                <a href="#" class="block py-2 hover:pl-3 hover:text-secBG"
+                  >support</a
+                >
+              </li>
+              <li>
+                <a href="#" class="block py-2 hover:pl-3 hover:text-secBG"
+                  >terms and conditions</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </section>
+        <section>
+          <h4 class="pb-2 md:pb-5 text-white text-lg">about</h4>
+          <nav>
+            <ul>
+              <li class="border-b border-b-textColor">
+                <a href="#" class="block py-2 hover:pl-3 hover:text-secBG"
+                  >sign in</a
+                >
+              </li>
+              <li class="border-b border-b-textColor">
+                <a href="#" class="block py-2 hover:pl-3 hover:text-secBG"
+                  >register</a
+                >
+              </li>
+              <li class="border-b border-b-textColor">
+                <a href="#" class="block py-2 hover:pl-3 hover:text-secBG"
+                  >about us</a
+                >
+              </li>
+              <li class="border-b border-b-textColor">
+                <a href="#" class="block py-2 hover:pl-3 hover:text-secBG"
+                  >blog</a
+                >
+              </li>
+              <li>
+                <a href="#" class="block py-2 hover:pl-3 hover:text-secBG"
+                  >contact us</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </section>
+        <section>
+          <h4 class="pb-2 md:pb-5 text-white text-lg">contact us</h4>
+          <p>
+            Pellentesque in ipsum id orci porta dapibus, id orci porta dapibus.
+          </p>
+          <button
+            class="w-full text-center mt-7 text-headColor bg-btnBG px-5 py-2 rounded-full hover:bg-btnHover"
+          >
+            graphberry@gmail.com
+          </button>
+          <nav class="pt-7">
+            <ul class="flex gap-3 text-[#777]">
+              <li>
+                <a
+                  href="#"
+                  class="text-3xl w-12 h-12 flex items-center justify-center rounded-full bg-white hover:text-[#3b5998]"
+                  ><ion-icon name="logo-facebook"></ion-icon
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-3xl w-12 h-12 flex items-center justify-center rounded-full bg-white hover:text-[#1da1f2]"
+                  ><ion-icon name="logo-twitter"></ion-icon
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-3xl w-12 h-12 flex items-center justify-center rounded-full bg-white hover:text-[#0077b5]"
+                  ><ion-icon name="logo-linkedin"></ion-icon
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-3xl w-12 h-12 flex items-center justify-center rounded-full bg-white hover:text-[#ea4c89]"
+                  ><ion-icon name="logo-dribbble"></ion-icon
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-3xl w-12 h-12 flex items-center justify-center rounded-full bg-white hover:text-[#bd081c]"
+                  ><ion-icon name="logo-pinterest"></ion-icon
+                ></a>
+              </li>
+            </ul>
+          </nav>
+        </section>
+      </div>
+      <p
+        class="border-t border-t-slate-700 py-3 px-3 mx-3 text-slate-200 text-center"
+      >
+        coded by
+        <span class="text-white hover:text-secBG cursor-pointer"
+          >mohamed f. nassar</span
+        >
+      </p>
+    </footer>
+
+    <!-- ion icons scripts -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <!-- my script -->
+    <script src="./dist/main.js"></script>
+  </body>
+</html>

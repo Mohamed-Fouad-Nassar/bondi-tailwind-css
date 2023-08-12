@@ -1,0 +1,16 @@
+{
+  "name": "bondi-tailwind-css",
+  "version": "1.0.0",
+  "description": "HTML, TailwindCSS and JS Named: Bondi [tailwind test project]. Design from Graphberry: https://www.graphberry.com. PSD Link: https://www.graphberry.com/item/bondi-psd-landing-page. My Design Link: https://mohamed-fouad-nassar.github.io/bondi-tailwind-css/.",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx tailwindcss -i ./src/input.css -o ./dist/style.css",
+    "watch": "npx tailwindcss -i ./src/input.css -o ./dist/style.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.3.3"
+  }
+}
